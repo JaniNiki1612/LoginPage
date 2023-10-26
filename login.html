@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h2>JavaScript Login Page</h2><br>
+    <div class="login">
+    <form id="login" method="get" acttion="login.php">
+     <label>
+        <b>User Name</b>
+    </label> 
+    
+    <input type="text" name="Uname" id="Uname" placeholder="Username"> 
+    <br><br>
+    <label><b>
+        Password
+    </b>
+    </label>
+    <input type="Password" name="Pass" id="Pass" placeholder="Password">
+     <br><br>
+     <input type="button" name="log" id="log" value="LOg In Here" onclick="login()">
+     <br><br>
+     <input type="checkbox" id="check">
+     <span>Remember me</span>
+     <br><br>
+     forgot <a href="#">Password</a>
+     </form>
+     </div>
+     <script type="text/JavaScript">
+      function login(){
+
+      
+     var username=document.getElementById('Uname').value;
+     var password=document.getElementById('Pass').value;
+     if(username=='niki'&& password=='niki1'){
+        console.log('Login Successfully');
+        location.assign('http://127.0.0.1:5500/welcomepage.html');
+
+     }
+     else{
+        window.alert('Wrong user Name and Password')
+     }
+     console.log(username);
+     console.log(password);
+      }
+        
+     </script>
+    
+</body>
+</html>
